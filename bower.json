@@ -1,0 +1,13 @@
+{
+  "name": "classic-grooming",
+  "version": "0.0.1",
+  "homepage": "https://github.com/codechaotic/classic-grooming",
+  "authors": [
+    "Asa Jones <thinkinfractals@gmail.com>"
+  ],
+  "description": "Website of Classic Grooming salon in Charlotte, NC",
+  "main": "",
+  "moduleType": [],
+  "license": "UNLICENSED",
+  "private": true
+}

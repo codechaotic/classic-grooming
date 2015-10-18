@@ -1,0 +1,10 @@
+{
+  "verbose": true,
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "script": "dist/server.js",
+  "ignore": ["*"],
+  "watch": ["foo/"],
+  "ext": "noop"
+}

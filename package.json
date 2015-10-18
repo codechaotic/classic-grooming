@@ -15,5 +15,21 @@
   "bugs": {
     "url": "https://github.com/codechaotic/classic-grooming/issues"
   },
-  "homepage": "https://github.com/codechaotic/classic-grooming#readme"
+  "homepage": "https://github.com/codechaotic/classic-grooming#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-flatten": "^0.2.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-util": "^3.0.6",
+    "jshint-stylish": "^2.0.1",
+    "main-bower-files": "^2.9.0",
+    "nodemon": "^1.7.1",
+    "q": "^1.4.1"
+  },
+  "dependencies": {
+    "koa": "^1.1.0",
+    "koa-send": "^2.0.1"
+  }
 }
