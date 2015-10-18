@@ -8,7 +8,7 @@ var path = require('path');
 var Q = require('q');
 
 var src = [
-  path.join(paths.client, 'modules.js'),
+  path.join(paths.client, 'app.js'),
   path.join(paths.client, 'components/**/*.js')
 ];
 var dest = path.join( paths.build.root, 'public/js');

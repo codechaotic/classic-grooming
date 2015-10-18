@@ -1,11 +1,9 @@
 /* jshint esnext: true */
 var koa = require('koa');
-var send = require('koa-send');
+var serve = require('koa-static');
 
 var server = new koa();
 
-server.use(function*() {
-  yield send(this, this.path, { root: __dirname + '/assets/index.html' });
-});
+server.use(serve(__dirname + '/public'));
 
 server.listen(8080);

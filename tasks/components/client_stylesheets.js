@@ -8,7 +8,7 @@ var Q = require('q');
 
 var src = path.join(paths.client, '**/*.css');
 var dest = path.join( paths.build.root, 'public/css');
-var file = paths.build.client_script;
+var file = paths.build.client_style;
 
 /**
 * Concatenate stylesheets into a single file. Return a promise.
