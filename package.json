@@ -1,0 +1,19 @@
+{
+  "name": "classic-grooming",
+  "version": "0.0.1",
+  "description": "Website of Classic Grooming salon in Charlotte, NC",
+  "main": " ",
+  "scripts": {
+    "start": "node --harmony dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codechaotic/classic-grooming.git"
+  },
+  "author": "Asa Jones",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/codechaotic/classic-grooming/issues"
+  },
+  "homepage": "https://github.com/codechaotic/classic-grooming#readme"
+}
