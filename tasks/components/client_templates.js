@@ -31,7 +31,10 @@ var watch = function(onChange) {
     .then(function() {
       return Q.Promise(function(resolve,reject) {
         gulp.watch(src)
-          .on('change', onChange)
+          .on('change', function(path) {
+            build();
+            onChange(path);
+          })
           .on('error', reject)
           .on('ready', resolve);
       });

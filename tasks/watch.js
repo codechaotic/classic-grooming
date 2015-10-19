@@ -7,11 +7,15 @@ var vendorFonts = require('./components/vendor_fonts');
 var serverViews = require('./components/server_views');
 var serverScripts = require('./components/server_scripts');
 var runServer = require('./components/run-server');
+var modernizr = require('./components/modernizr');
 
 var Q = require('q');
 var path = require('path');
 var gutil = require('gulp-util');
 
+var log = function(msg, event) {
+  gutil.log('-', gutil.colors.green(msg), path.basename(event.path));
+}
 /**
 * task: watch
 * Watches all assets and rebuilds on change
@@ -19,37 +23,32 @@ var gutil = require('gulp-util');
 module.exports = function() {
   return Q.all([
     clientStylesheets.watch(function(event) {
-      gutil.log('-', gutil.colors.green('stylesheet changed:'), path.basename(event.path));
-      clientStylesheets.build();
+      log('stylesheet changed:', event);
     }),
     clientTemplates.watch(function(event) {
-      gutil.log('-', gutil.colors.green('template changed:'), path.basename(event.path));
-      clientTemplates.build();
+      log('template changed:', event);
     }),
     clientScripts.watch(function(event) {
-      gutil.log('-', gutil.colors.green('client changed:'), path.basename(event.path));
-      clientScripts.build();
+      log('client changed:', event);
     }),
     vendorStylesheets.watch(function(event) {
-      gutil.log('-', gutil.colors.green('stylesheet changed:'), path.basename(event.path));
-      vendorStylesheets.build();
+      log('stylesheet changed:', event);
     }),
     vendorScripts.watch(function(event) {
-      gutil.log('-', gutil.colors.green('library changed:'), path.basename(event.path));
-      vendorScripts.build();
+      log('library changed:', event);
     }),
     vendorFonts.watch(function(event) {
-      gutil.log('-', gutil.colors.green('font changed:'), path.basename(event.path));
-      vendorFonts.build();
+      log('font changed:', event);
     }),
     serverViews.watch(function(event) {
-      gutil.log('-', gutil.colors.green('view changed:'), path.basename(event.path));
-      serverViews.build();
+      log('view changed:', event);
     }),
     serverScripts.watch(function(event) {
-      gutil.log('-', gutil.colors.green('server changed:'), path.basename(event.path));
-      serverScripts.build();
+      log('server changed:', event);
       runServer.restart();
+    }),
+    modernizr.watch(function(event) {
+      log('modernizr changed:', event);
     })
   ]).then(function() {
     runServer.start();

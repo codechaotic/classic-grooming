@@ -1,15 +1,13 @@
 var paths = require('../config/paths');
 
 var gulp = require('gulp');
+var modernizr = require('gulp-modernizr');
 var plumber = require('gulp-plumber');
-var concat = require('gulp-concat');
-var mainBowerFiles = require('main-bower-files');
 var path = require('path');
 var Q = require('q');
 
-var src = mainBowerFiles('**/*.js');
+var src = path.join(paths.client, '**/*.@(js|css)');
 var dest = path.join( paths.build.root, 'public/js');
-var file = paths.build.vendor_script;
 
 /**
 * Copy all vendored scripts in bower dependency order. Return a promise.
@@ -18,7 +16,7 @@ var build = function() {
   return Q.Promise(function(resolve,reject) {
     gulp.src(src)
       .pipe(plumber())
-      .pipe(concat(file))
+      .pipe(modernizr())
       .pipe(gulp.dest(dest))
       .on('end', resolve)
       .on('error', reject);

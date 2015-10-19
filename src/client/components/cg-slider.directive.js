@@ -8,8 +8,11 @@
   function cgSlider() {
     return {
       restrict: 'A',
+      templateUrl: 'templates/cg-slider.html',
       link: function(scope, el, attrs) {
-        console.log(el.name);
+        $(function() {
+            $('.cg-slider').unslider();
+        });
       }
     };
   }

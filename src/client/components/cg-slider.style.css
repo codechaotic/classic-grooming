@@ -1,0 +1,10 @@
+.cg-slider {
+  position: relative;
+  overflow: auto;
+}
+.cg-slider li {
+  list-style: none;
+}
+.cg-slider ul li {
+  float: left;
+}

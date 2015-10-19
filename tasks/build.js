@@ -6,6 +6,7 @@ var vendorScripts = require('./components/vendor_scripts');
 var vendorFonts = require('./components/vendor_fonts');
 var serverViews = require('./components/server_views');
 var serverScripts = require('./components/server_scripts');
+var modernizr = require('./components/modernizr');
 
 var Q = require('q');
 
@@ -23,6 +24,7 @@ module.exports = function() {
     vendorScripts.build(),
     vendorFonts.build(),
     serverViews.build(),
-    serverScripts.build()
+    serverScripts.build(),
+    modernizr.build()
   ])
 };

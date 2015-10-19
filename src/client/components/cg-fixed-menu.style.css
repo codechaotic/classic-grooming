@@ -1,0 +1,13 @@
+.cg-fixed-menu {
+  position: fixed;
+  z-index: 10;
+}
+
+.cg-fixed-menu ul {
+
+}
+
+.cg-fixed-menu ul li {
+  list-style: none;
+  float: left;
+}
