@@ -9,10 +9,19 @@
     return {
       restrict: 'A',
       templateUrl: 'templates/cg-slider.html',
-      link: function(scope, el, attrs) {
-        $(function() {
-            $('.cg-slider').unslider();
-        });
+      link: function(scope, element) {
+        $(element)
+          .addClass('cg-slider')
+          .slick({
+            arrows: false,
+            infinite: true,
+            lazyLoad: 'progressive',
+            dots: true,
+            dotsClass: 'cg-slider-dot',
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+           });
       }
     };
   }

@@ -1,10 +1,9 @@
 .cg-slider {
-  position: relative;
-  overflow: auto;
+  width: 100%;
+  background-color: #888;
 }
-.cg-slider li {
-  list-style: none;
-}
-.cg-slider ul li {
-  float: left;
+.cg-slider div {
+  min-height: 350px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
