@@ -1,0 +1,67 @@
+@import (reference) "variables.less";
+@import (reference) "overrides.less";
+@import (reference) "mixins.less";
+
+.cg-slider {
+  width: 100%;
+  height: 300px;
+  @media (min-width: @screen-sm-min) {
+    height: 400px
+  }
+  @media (min-width: @screen-md-min) {
+    height: 500px
+  }
+}
+
+.cg-slider div {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.cg-slider div img {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.cg-slider-dots {
+  position: relative;
+  height: 0px;
+  top: -30px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.cg-slider-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.cg-slider-dots li button {
+  width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0px none;
+  outline: medium none;
+  border: 1px solid #555;
+}
+
+.cg-slider-dots li.slick-active button{
+  background-color: #333;
+  border-color: #222;
+}

@@ -1,8 +1,5 @@
-<div class="cg-fixed-menu">
-  <ul>
-    <li>Our Salon</li>
-    <li>Our Services</li>
-    <li>Our Team</li>
-    <li>Contact</li>
-  </ul>
-</div>
+<ul>
+  <li ng-repeat="item in ctrl.menu">
+    <a href="{{ item.href }}">{{ item.name }}</a>
+  </li>
+</ul>

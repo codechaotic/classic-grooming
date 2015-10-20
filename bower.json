@@ -35,7 +35,6 @@
     },
     "bootstrap": {
       "main": [
-        "dist/css/bootstrap.min.css",
         "dist/js/bootstrap.min.js",
         "dist/fonts/**/*"
       ]
@@ -45,8 +44,7 @@
     },
     "slick-carousel": {
       "main": [
-        "slick/slick.min.js",
-        "slick/slick.css"
+        "slick/slick.min.js"
       ]
     },
     "socket.io-client": {

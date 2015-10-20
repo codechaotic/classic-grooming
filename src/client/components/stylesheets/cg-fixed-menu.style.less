@@ -1,0 +1,22 @@
+@import (reference) "variables.less";
+@import (reference) "overrides.less";
+@import (reference) "mixins.less";
+@import (reference) "grid.less";
+
+.cg-fixed-menu {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.cg-fixed-menu ul {
+  position: relative;
+  .container();
+  .center-block();
+}
+
+.cg-fixed-menu ul > li {
+  .make-sm-column(3);
+  text-align: center;
+  list-style: none;
+}

@@ -1,7 +1,6 @@
 var clientStylesheets = require('./components/client_stylesheets');
 var clientTemplates = require('./components/client_templates');
 var clientScripts = require('./components/client_scripts');
-var vendorStylesheets = require('./components/vendor_stylesheets');
 var vendorScripts = require('./components/vendor_scripts');
 var vendorFonts = require('./components/vendor_fonts');
 var serverViews = require('./components/server_views');
@@ -30,9 +29,6 @@ module.exports = function() {
     }),
     clientScripts.watch(function(event) {
       log('client changed:', event);
-    }),
-    vendorStylesheets.watch(function(event) {
-      log('stylesheet changed:', event);
     }),
     vendorScripts.watch(function(event) {
       log('library changed:', event);
