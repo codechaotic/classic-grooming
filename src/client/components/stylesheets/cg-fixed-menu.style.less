@@ -5,17 +5,23 @@
 
 .cg-fixed-menu {
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 10;
 }
 
-.cg-fixed-menu ul {
-  position: relative;
+.cg-fixed-menu div {
   .container();
-  .center-block();
 }
 
-.cg-fixed-menu ul > li {
+.cg-fixed-menu div > ul {
+  padding: 0;
+  margin: 0;
+  .clearfix();
+  .make-row();
+}
+
+.cg-fixed-menu div > ul > li {
   .make-sm-column(3);
   text-align: center;
   list-style: none;
